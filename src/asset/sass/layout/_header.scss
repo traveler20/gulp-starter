@@ -1,0 +1,10 @@
+/* l-header
+--------------------------- */
+@use "./../foundation/system" as s;
+
+.l-header {
+	@include s.breakpoint(tablet) {
+	}
+	@include s.breakpoint(pc) {
+	}
+}

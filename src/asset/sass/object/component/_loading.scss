@@ -1,0 +1,42 @@
+/* c-loading
+--------------------------- */
+@use "./../../foundation/system" as s;
+
+.c-loading {
+	width: 100vw;
+	height: 100vh;
+	transition: all 1s;
+	background-color: s.$c-accent;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	&.is-loaded {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	&__spinner {
+		width: 100px;
+		height: 100px;
+		margin: 200px auto;
+		background-color: s.$c-base;
+		border-radius: 100%;
+		animation: loadingAnimation 1s infinite ease-in-out;
+	}
+	/* LoadingAnimation */
+	@keyframes loadingAnimation {
+		0% {
+			transform: scale(0);
+		}
+		100% {
+			transform: scale(1);
+			opacity: 0;
+		}
+	}
+
+	@include s.breakpoint(tablet) {
+	}
+	@include s.breakpoint(pc) {
+	}
+}

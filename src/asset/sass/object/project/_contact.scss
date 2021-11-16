@@ -1,0 +1,10 @@
+/* p-contact
+--------------------------- */
+@use "./../../foundation/system" as s;
+
+.p-contact {
+	@include s.breakpoint(tablet) {
+	}
+	@include s.breakpoint(pc) {
+	}
+}

@@ -1,0 +1,36 @@
+/* c-section
+--------------------------- */
+@use "./../../foundation/system" as s;
+
+.c-section {
+	background-color: s.$c-base;
+	padding: 120px 0;
+	&:nth-of-type(even) {
+		background-color: s.$c-base-sub;
+	}
+
+	&__inner {
+		max-width: 1220px;
+		padding: 10px 20px;
+		margin: 0 auto;
+	}
+	&__title {
+		color: s.$c-accent;
+		text-align: center;
+		font-size: 3.6rem;
+		font-weight: 700;
+		letter-spacing: 8px;
+		margin: 0 auto 12px;
+		@include s.garamond(bold);
+	}
+	&__lead {
+		display: table;
+		margin: 0 auto 44px;
+		text-align: left;
+	}
+
+	@include s.breakpoint(tablet) {
+	}
+	@include s.breakpoint(pc) {
+	}
+}
