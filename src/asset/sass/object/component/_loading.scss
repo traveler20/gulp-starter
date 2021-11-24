@@ -6,7 +6,7 @@
 	width: 100vw;
 	height: 100vh;
 	transition: all 1s;
-	background-color: s.$c-accent;
+	background-color: s.$c-base;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -19,19 +19,18 @@
 	&__spinner {
 		width: 100px;
 		height: 100px;
-		margin: 200px auto;
-		background-color: s.$c-base;
-		border-radius: 100%;
-		animation: loadingAnimation 1s infinite ease-in-out;
+		margin: 40vh auto;
+		border: 3px solid s.$c-accent;
+		border-top: 3px solid transparent;
+		border-radius: 50%;
+		animation: loadingAnimation 0.8s linear 0s infinite;
 	}
-	/* LoadingAnimation */
 	@keyframes loadingAnimation {
-		0% {
-			transform: scale(0);
+		from {
+			transform: rotate(0);
 		}
-		100% {
-			transform: scale(1);
-			opacity: 0;
+		to {
+			transform: rotate(359deg);
 		}
 	}
 
