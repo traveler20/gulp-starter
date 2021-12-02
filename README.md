@@ -10,6 +10,11 @@ Git のリポジトリをコピー後、ターミナルで以下のコマンド�
 
 `npx gulp`
 
+http://localhost:3000/
+
+大体こちらの URL にてローカルサーバーが立ち上がる。  
+HTML の編集や Sass のコンパイルに対して自動でリロードするようにも設定済み。
+
 ## gulp の機能
 
 - Dart Sass のコンパイル
@@ -20,9 +25,44 @@ Git のリポジトリをコピー後、ターミナルで以下のコマンド�
 
 ## 構成
 
+`src`内でコーディングして`docs`に出力させる構成。
+
 ```
 docs
+ │ index.html
+ │
+ └─asset
+    ├─css
+    ├─img
+    └─js
 src
+ │ index.html
+ │
+ └─asset
+    ├─img
+    ├─js
+    └─sass
+       │ style.scss
+       │
+       ├─foundation
+       │   _base.scss
+       │   _reset.scss
+       │   _system.scss
+       │
+       ├─layout
+       │   _footer.scss
+       │   _header.scss
+       │
+       └─object
+          ├─component
+          │   _loading.scss
+          │   _section.scss
+          │
+          ├─project
+          │   _contact.scss
+          │
+          └─utility
+              _display.scss
 ```
 
 ### gulpfile.js
@@ -42,3 +82,30 @@ github pages の公開ディレクトリで docs を選択すると通常通り�
 ### src/asset/sass
 
 Sass のコーディングファイル。CSS 設計は FLOCSS を採用。
+
+Sass 自体は Dart Sass でコーディングしており、sass フォルダ直下の style.scss ですべての Sass ファイルを`@use`している。
+
+```
+sass
+│ style.scss
+│
+├─foundation
+│   _base.scss
+│   _reset.scss
+│   _system.scss
+│
+├─layout
+│   _footer.scss
+│   _header.scss
+│
+└─object
+    ├─component
+    │   _loading.scss
+    │   _section.scss
+    │
+    ├─project
+    │   _contact.scss
+    │
+    └─utility
+        _display.scss
+```
