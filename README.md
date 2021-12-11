@@ -13,6 +13,9 @@ http://localhost:3000/
 大体こちらの URL にてローカルサーバーが立ち上がる。  
 HTML の編集や Sass のコンパイルに対して自動でリロードするようにも設定済み。
 
+詳細については[Zenn](https://zenn.dev/yurukei20/articles/f1f9b248fcf18b)で解説しています。
+
+https://zenn.dev/yurukei20/articles/f1f9b248fcf18b
 
 # 技術的な構成
 
