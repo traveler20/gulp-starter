@@ -1,0 +1,37 @@
+/* c-table
+--------------------------- */
+@use "./../../foundation/system" as s;
+
+.c-table {
+	&--matrix {
+		white-space: nowrap;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		table {
+			border-collapse: collapse;
+			border: solid 3px s.$c-accent;
+			margin: 0 auto;
+		}
+		caption {
+			padding: 8px 10px;
+			color: #fff;
+			font-weight: bold;
+			background: s.$c-accent;
+		}
+		th,
+		td {
+			padding: 8px 10px;
+		}
+		th {
+			border: solid 1px s.$c-accent;
+			background-color: rgba($color: s.$c-accent, $alpha: 0.5);
+		}
+		td {
+			border: dashed 1px s.$c-accent;
+		}
+	}
+	@include s.breakpoint(tablet) {
+	}
+	@include s.breakpoint(pc) {
+	}
+}

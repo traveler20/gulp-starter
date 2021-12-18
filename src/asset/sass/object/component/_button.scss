@@ -1,11 +1,11 @@
-/* c-loading
+/* c-button
 --------------------------- */
 @use "./../../foundation/system" as s;
 
 .c-button {
 	font-size: 14px;
 	font-weight: bold;
-	color: s.$c-base;
+	color: s.$c-body;
 	background-color: s.$c-accent;
 	border: solid 2px s.$c-accent;
 	border-radius: 50px;
@@ -19,6 +19,7 @@
 	}
 	&Block {
 		text-align: center;
+		padding: 16px 0;
 	}
 
 	@include s.breakpoint(tablet) {

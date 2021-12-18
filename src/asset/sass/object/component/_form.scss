@@ -1,0 +1,10 @@
+/* c-form
+--------------------------- */
+@use "./../../foundation/system" as s;
+
+.c-form {
+	@include s.breakpoint(tablet) {
+	}
+	@include s.breakpoint(pc) {
+	}
+}
