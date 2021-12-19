@@ -10,9 +10,9 @@
 	}
 
 	&__inner {
-		max-width: 1220px;
-		padding: 10px 20px;
+		@include s.content-maxwidth();
 		margin: 0 auto;
+		padding: 10px 20px;
 	}
 	&__title {
 		color: s.$c-accent;

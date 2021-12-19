@@ -3,14 +3,30 @@
 
 // color system
 // ---------------------
-$c-base: #333;
-$c-base-sub: #222;
-$c-base-dark: #000; // footer only
-$c-base-right: #999;
-$c-body: #fff;
+$c-base: #efefef;
+$c-base-sub: #fff;
+$c-body: #333;
 $c-accent: #ca6060;
 
-$transition-base: all 0.4s;
+$c-dark: #222; // footer
+
+// // dark mode
+// $c-base: #333;
+// $c-base-sub: #222;
+// $c-body: #fff;
+// $c-accent: #ca6060;
+
+// transition
+// ---------------------
+@mixin transition-base($second: 0.4s) {
+	transition: all $second;
+}
+
+// content max-width
+// ---------------------
+@mixin content-maxwidth($px: 1200px) {
+	max-width: $px;
+}
 
 // font system
 // ---------------------

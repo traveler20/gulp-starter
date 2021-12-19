@@ -3,6 +3,16 @@
 @use "./../foundation/system" as s;
 
 .l-header {
+	&__inner {
+		@include s.content-maxwidth();
+		margin: 0 auto;
+		padding: 10px 20px;
+		color: s.$c-base;
+
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+	}
 	@include s.breakpoint(tablet) {
 	}
 	@include s.breakpoint(pc) {

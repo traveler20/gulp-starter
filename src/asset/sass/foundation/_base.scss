@@ -45,33 +45,20 @@ object {
 }
 a {
 	color: #1ca9e3;
-	text-decoration: none;
+	text-decoration: underline;
 	position: relative;
-	&::after {
-		position: absolute;
-		bottom: -3px;
-		left: 50%;
-		content: "";
-		width: 0;
-		height: 1px;
-		background-color: #1ca9e3;
-		transition: 0.4s;
-		transform: translateX(-50%);
-	}
+
 	&:hover {
 		text-decoration: none;
-		&:after {
-			width: 100%;
-		}
 	}
 }
 a:hover img {
 	text-decoration: none;
 	opacity: 0.8;
-	transition: s.$transition-base;
+	@include s.transition-base();
 }
 a,
 label,
 input {
-	transition: s.$transition-base;
+	@include s.transition-base();
 }

@@ -3,15 +3,32 @@
 @use "./../foundation/system" as s;
 
 .l-footer {
-	text-align: center;
+	// text-align: center;
+	font-size: 14px;
+	background: s.$c-dark;
+	padding: 40px 0 50px;
 
 	&__inner {
-		background: s.$c-base-dark;
-		padding: 30px;
+		@include s.content-maxwidth();
+		margin: 0 auto;
+		padding: 10px 20px;
+		color: s.$c-base;
+
+		display: flex;
+		justify-content: space-evenly;
+		align-items: flex-start;
+	}
+	&__lists {
+		li + li {
+			margin-top: 8px;
+		}
+		a {
+			color: s.$c-base;
+		}
 	}
 	&__copy {
-		color: s.$c-base-right;
 		font-size: 12px;
+		margin: auto 0 0;
 	}
 
 	@include s.breakpoint(tablet) {
