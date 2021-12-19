@@ -167,6 +167,9 @@
 							<button type="submit" class="c-button">送信する</button>
 						</div>
 					</form>
+					<p id="js-formThanks" class="c-formThanks">
+						お問い合わせありがとうございます。
+					</p>
 				</div>
 			</section>
 			<!-- /.p-contact -->
@@ -197,7 +200,7 @@
 			name="hidden_iframe"
 			id="hidden_iframe"
 			style="display: none"
-			onload="if(submitted){window.location='/thanks';}"
+			onload="if(submitted){document.getElementById('js-formThanks').classList.add('is-received');}"
 		></iframe>
 	</body>
 </html>

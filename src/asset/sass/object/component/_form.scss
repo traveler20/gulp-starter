@@ -49,6 +49,20 @@
 		margin-top: 36px;
 	}
 
+	&Thanks {
+		text-align: center;
+		max-width: 600px;
+		margin: 40px auto 0;
+		padding: 8px;
+		border: solid 3px s.$c-accent;
+		border-radius: 2px;
+
+		display: none;
+		&.is-received {
+			display: block;
+		}
+	}
+
 	@include s.breakpoint(tablet) {
 		&__item {
 			flex-wrap: nowrap;
