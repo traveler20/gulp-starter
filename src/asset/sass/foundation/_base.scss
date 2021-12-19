@@ -59,6 +59,7 @@ a:hover img {
 }
 a,
 label,
-input {
+input,
+button {
 	@include s.transition-base();
 }

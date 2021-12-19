@@ -40,13 +40,12 @@
 
 		<!-- main -->
 		<main>
-			<!-- .p-contact -->
-			<section id="contact" class="p-contact c-section">
+			<!-- .p-about -->
+			<section id="about" class="p-about c-section">
 				<div class="c-section__inner">
-					<h2 class="c-section__title">contact</h2>
+					<h2 class="c-section__title">about</h2>
 					<p class="c-section__lead">
-						お問合わせはこちらからご連絡ください。<a href="">リンク</a
-						>が入ります。
+						お問合わせは<a href="#contact">こちら</a>からご連絡ください。
 					</p>
 					<div class="c-table--matrix">
 						<table>
@@ -83,8 +82,91 @@
 						</table>
 					</div>
 					<div class="c-buttonBlock">
-						<a href="" class="c-button">お問い合わせフォームへ</a>
+						<a href="#contact" class="c-button">お問い合わせフォームへ</a>
 					</div>
+				</div>
+			</section>
+			<!-- /.p-about -->
+
+			<!-- .p-contact -->
+			<section id="contact" class="p-contact c-section">
+				<div class="c-section__inner">
+					<h2 class="c-section__title">contact</h2>
+					<p class="c-section__lead">お問合わせはこちらからご連絡ください。</p>
+					<form
+						action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSdKu5nx2UrKoUZ2vpv8aKSG0LmLhYMiGTr5FKgEVZTHTBbblw/formResponse"
+						method="POST"
+						target="hidden_iframe"
+						onsubmit="submitted=true;"
+						class="c-form"
+					>
+						<div class="c-form__item">
+							<label class="c-form__label" for="field-name"
+								>名前・会社名<span class="c-form__required">必須</span></label
+							>
+							<input
+								name="entry.690315515"
+								class="c-form__input"
+								id="field-name"
+								placeholder="株式会社 山田"
+								type="text"
+								required="required"
+							/>
+						</div>
+						<div class="c-form__item">
+							<label class="c-form__label" for="field-mail"
+								>メールアドレス<span class="c-form__required">必須</span></label
+							>
+							<input
+								name="entry.310605352"
+								class="c-form__input"
+								id="field-mail"
+								placeholder="sample@gmail.com"
+								type="email"
+								required="required"
+							/>
+						</div>
+						<div class="c-form__item">
+							<label class="c-form__label" for="field-select"
+								>ご用件/目的<span class="c-form__required">必須</span></label
+							>
+							<select
+								name="entry.2098078720"
+								class="c-form__input"
+								id="field-select"
+								required="required"
+							>
+								<option value="">選択してください</option>
+								<option value="WEBサイトデザインのお見積り">
+									WEBサイトデザインのお見積り
+								</option>
+								<option value="WEBサイトコーディングのお見積り">
+									WEBサイトコーディングのお見積り
+								</option>
+								<option value="WEBサイト構築のお見積り">
+									WEBサイト構築のお見積り
+								</option>
+								<option value="取材等の連絡">取材等の連絡</option>
+								<option value="その他（メッセージ内容に記載ください）">
+									その他（メッセージ内容に記載ください）
+								</option>
+							</select>
+						</div>
+						<div class="c-form__item">
+							<label class="c-form__label" for="field-message"
+								>メッセージ内容</label
+							>
+							<textarea
+								name="entry.1726417427"
+								class="c-form__input"
+								id="field-message"
+								placeholder="お問い合わせ内容"
+							></textarea>
+						</div>
+						<div class="c-form__submit">
+							<button type="submit" class="c-button">送信する</button>
+						</div>
+					</form>
 				</div>
 			</section>
 			<!-- /.p-contact -->
@@ -111,5 +193,11 @@
 		<!-- /.l-footer -->
 
 		<script src="./asset/js/script.js"></script>
+		<iframe
+			name="hidden_iframe"
+			id="hidden_iframe"
+			style="display: none"
+			onload="if(submitted){window.location='/thanks';}"
+		></iframe>
 	</body>
 </html>

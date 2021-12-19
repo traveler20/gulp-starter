@@ -37,3 +37,6 @@ function showElementAnimation() {
 }
 showElementAnimation();
 window.addEventListener("scroll", showElementAnimation);
+
+//
+let submitted = false;

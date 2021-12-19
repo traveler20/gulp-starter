@@ -3,7 +3,62 @@
 @use "./../../foundation/system" as s;
 
 .c-form {
+	max-width: 600px;
+	margin: 0 auto;
+	&__item {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		margin-bottom: 20px;
+	}
+	&__label,
+	&__input {
+		padding: 10px;
+	}
+	&__label {
+		width: 90%;
+	}
+	&__input {
+		width: 90%;
+		font-size: 16px;
+		border: solid 1px s.$c-body;
+		border-radius: 4px;
+		&:focus-visible {
+			outline: s.$c-accent auto 1px;
+		}
+	}
+	ul.c-form__input {
+		border: none;
+		list-style-type: none;
+		margin: 0;
+	}
+	textarea.c-form__input {
+		height: 160px;
+	}
+
+	&__required {
+		color: s.$c-base-sub;
+		background-color: s.$c-accent;
+		border-radius: 2px;
+		padding: 5px 5px;
+		margin: 0 0 0 18px;
+	}
+
+	&__submit {
+		text-align: center;
+		margin-top: 36px;
+	}
+
 	@include s.breakpoint(tablet) {
+		&__item {
+			flex-wrap: nowrap;
+		}
+		&__label {
+			width: 40%;
+		}
+		&__input {
+			width: 55%;
+		}
 	}
 	@include s.breakpoint(pc) {
 	}
