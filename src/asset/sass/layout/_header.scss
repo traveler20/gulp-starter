@@ -2,7 +2,7 @@
 --------------------------- */
 @use "./../foundation/system" as s;
 
-$header-height: 80px;
+$header-height: 60px;
 
 .l-header {
 	width: 100%;
@@ -218,6 +218,7 @@ $header-height: 80px;
 			background: transparent;
 			a {
 				color: s.$c-body;
+				margin: 8px auto;
 				padding: 0 8px;
 				&:after {
 					background-color: s.$c-body;
