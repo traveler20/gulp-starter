@@ -5,7 +5,18 @@
 $header-height: 80px;
 
 .l-header {
+	width: 100%;
 	background-color: s.$c-light;
+
+	position: fixed;
+	top: 0;
+	z-index: 2;
+	@include s.transition-base();
+	transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	box-shadow: 0 4px 4px -4px rgba($color: s.$c-dark, $alpha: 0.6);
+	&.is-headIn {
+		transform: translateY(-100%);
+	}
 
 	&__inner {
 		@include s.content-maxwidth();
@@ -106,7 +117,7 @@ $header-height: 80px;
 			position: absolute;
 			height: 4px;
 			width: 25px;
-			background-color: #eee;
+			background-color: s.$c-body;
 			border-radius: 1px;
 			content: "";
 			cursor: pointer;

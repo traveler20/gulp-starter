@@ -7,6 +7,37 @@ window.onload = function () {
 	document.getElementById("js-fv").classList.add("is-show");
 };
 
+//
+(function () {
+	const target = document.getElementById("js-header"),
+		height = 56;
+	let offset = 0,
+		lastPosition = 0,
+		ticking = false;
+
+	function onScroll() {
+		if (lastPosition > height) {
+			if (lastPosition > offset) {
+				target.classList.add("is-headIn");
+			} else {
+				target.classList.remove("is-headIn");
+			}
+			offset = lastPosition;
+		}
+	}
+
+	window.addEventListener("scroll", function (e) {
+		lastPosition = window.scrollY;
+		if (!ticking) {
+			window.requestAnimationFrame(function () {
+				onScroll(lastPosition);
+				ticking = false;
+			});
+			ticking = true;
+		}
+	});
+})();
+
 // #js-navToggle js-navLists
 const toggle = document.getElementsByClassName("js-navToggle")[0];
 const navLink = document.querySelectorAll(
