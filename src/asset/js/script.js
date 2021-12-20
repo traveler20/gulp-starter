@@ -7,6 +7,18 @@ window.onload = function () {
 	document.getElementById("js-fv").classList.add("is-show");
 };
 
+// #js-navToggle js-navLists
+const toggle = document.getElementsByClassName("js-navToggle")[0];
+const navLink = document.querySelectorAll(
+	".l-header__navLists li a,.l-header__navCta"
+);
+
+for (let i = 0; i < navLink.length; i++) {
+	navLink[i].onclick = function () {
+		toggle.checked = false;
+	};
+}
+
 // .js-fadein
 function showElementAnimation() {
 	/* js-fadeInの値をelementに代入 */

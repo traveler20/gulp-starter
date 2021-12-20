@@ -15,8 +15,10 @@
 		color: s.$c-base;
 
 		display: flex;
+		flex-direction: column;
 		justify-content: space-evenly;
 		align-items: flex-start;
+		gap: 16px;
 	}
 	&__lists {
 		li + li {
@@ -32,6 +34,9 @@
 	}
 
 	@include s.breakpoint(tablet) {
+		&__inner {
+			flex-direction: row;
+		}
 	}
 	@include s.breakpoint(pc) {
 	}
