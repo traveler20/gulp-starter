@@ -25,7 +25,7 @@ $header-height: 80px;
 		color: s.$c-base;
 
 		display: flex;
-		justify-content: space-evenly;
+		justify-content: space-between;
 		align-items: center;
 	}
 
@@ -35,9 +35,6 @@ $header-height: 80px;
 		color: s.$c-body;
 		font-size: 2rem;
 		font-weight: bold;
-
-		width: 240px;
-		max-width: 80%;
 	}
 
 	&__nav {
@@ -170,6 +167,10 @@ $header-height: 80px;
 	}
 
 	@include s.breakpoint(tablet) {
+		&__inner {
+			justify-content: space-evenly;
+		}
+
 		&__nav {
 			flex-direction: row-reverse;
 		}
@@ -229,5 +230,8 @@ $header-height: 80px;
 		}
 	}
 	@include s.breakpoint(pc) {
+		&__inner {
+			gap: 200px;
+		}
 	}
 }
