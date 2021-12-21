@@ -1,4 +1,4 @@
-// loading animation
+// #js-loading animation
 window.onload = function () {
 	const loadingAnimation = document.getElementById("js-loading");
 
@@ -7,7 +7,7 @@ window.onload = function () {
 	document.getElementById("js-fv").classList.add("is-show");
 };
 
-//
+// #js=header headerIn
 (function () {
 	const target = document.getElementById("js-header"),
 		height = 56;
@@ -81,5 +81,5 @@ function showElementAnimation() {
 showElementAnimation();
 window.addEventListener("scroll", showElementAnimation);
 
-//
+// submit
 let submitted = false;

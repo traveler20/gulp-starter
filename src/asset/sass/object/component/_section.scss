@@ -28,6 +28,9 @@
 		margin: 0 auto 44px;
 		text-align: left;
 	}
+	&__block {
+		margin: 32px auto;
+	}
 
 	@include s.breakpoint(tablet) {
 	}

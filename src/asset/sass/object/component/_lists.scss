@@ -1,0 +1,27 @@
+/* c-lists
+--------------------------- */
+@use "./../../foundation/system" as s;
+
+.c-lists {
+	li {
+		position: relative;
+		padding-left: 24px;
+		&:before {
+			content: "\f00c";
+			font-family: "Font Awesome 5 Free";
+			font-weight: bold;
+			left: 0;
+			position: absolute;
+		}
+	}
+
+	&Title {
+		font-size: 2rem;
+		font-weight: bold;
+	}
+
+	@include s.breakpoint(tablet) {
+	}
+	@include s.breakpoint(pc) {
+	}
+}

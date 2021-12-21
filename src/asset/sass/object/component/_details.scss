@@ -1,0 +1,71 @@
+/* c-details
+--------------------------- */
+@use "./../../foundation/system" as s;
+
+.c-details {
+	width: 80%;
+	margin: 0 auto;
+
+	summary {
+		position: relative;
+		display: block;
+		padding: 10px 20px;
+		font-weight: bold;
+		background-color: rgba($color: s.$c-accent, $alpha: 0.5);
+		cursor: pointer;
+		transition: 0.2s;
+		&:hover {
+			background-color: rgba($color: s.$c-accent, $alpha: 0.7);
+		}
+		/* デフォルトの矢印を消す */
+		&::-webkit-details-marker {
+			display: none;
+		}
+		/* アコーディオンの＋アイコン */
+		&:after {
+			position: absolute;
+			content: "\f067";
+			font-family: "Font Awesome 5 Free";
+			font-weight: bold;
+			font-size: 20px;
+			color: s.$c-accent;
+			margin: auto;
+			top: 18%;
+			right: 3%;
+			transition: 0.4s;
+		}
+	}
+
+	/* アコーディオンオープン時のスタイル */
+	&[open] {
+		summary {
+			background-color: rgba($color: s.$c-accent, $alpha: 0.7);
+			&:after {
+				transform: rotate(135deg); /* アイコンを回転 */
+			}
+		}
+		/* アニメーション */
+		.c-faq__content {
+			animation: detailsopen 0.5s ease;
+		}
+	}
+	@keyframes detailsopen {
+		0% {
+			opacity: 0;
+			transform: translateY(-10px);
+		}
+		100% {
+			opacity: 1;
+			transform: none;
+		}
+	}
+
+	&__content {
+		padding: 10px 20px;
+	}
+
+	@include s.breakpoint(tablet) {
+	}
+	@include s.breakpoint(pc) {
+	}
+}
