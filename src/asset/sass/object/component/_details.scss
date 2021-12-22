@@ -3,7 +3,7 @@
 @use "./../../foundation/system" as s;
 
 .c-details {
-	width: 80%;
+	width: 100%;
 	margin: 0 auto;
 
 	summary {
@@ -24,14 +24,13 @@
 		/* アコーディオンの＋アイコン */
 		&:after {
 			position: absolute;
-			content: "\f067";
-			font-family: "Font Awesome 5 Free";
-			font-weight: bold;
-			font-size: 20px;
+			top: 2px;
+			right: 3%;
+			content: "\e145";
+			font-family: "Material Icons";
+			font-size: 28px;
 			color: s.$c-accent;
 			margin: auto;
-			top: 18%;
-			right: 3%;
 			transition: 0.4s;
 		}
 	}
@@ -65,6 +64,7 @@
 	}
 
 	@include s.breakpoint(tablet) {
+		width: 80%;
 	}
 	@include s.breakpoint(pc) {
 	}

@@ -12,6 +12,14 @@
 	border-radius: 50px;
 	padding: 16px 79px;
 	text-decoration: none;
+
+	position: relative;
+	&:after {
+		position: absolute;
+		right: 24px;
+		content: "\e5e1";
+		font-family: "Material Icons";
+	}
 	&:hover {
 		color: s.$c-accent;
 		background-color: transparent;
