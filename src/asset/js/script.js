@@ -10,7 +10,7 @@ window.onload = function () {
 // #js=header headerIn
 (function () {
 	const target = document.getElementById("js-header"),
-		height = 56;
+		height = 60;
 	let offset = 0,
 		lastPosition = 0,
 		ticking = false;
