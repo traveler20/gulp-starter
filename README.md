@@ -4,6 +4,8 @@ gulp で FLOCSS × Dart Sass のコーディングをするためのスタータ
 
 Git のリポジトリをコピー後、ターミナルで以下のコマンドを実行。
 
+`git clone https://github.com/traveler20/gulp-starter.git`
+
 `npm install`
 
 `npx gulp`
