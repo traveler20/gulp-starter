@@ -1,6 +1,7 @@
 //gulp本体
 const gulp = require("gulp");
 
+// const csscomb = require("gulp-csscomb");
 // scss Dart Sass はSass公式が推奨 @use構文などが使える
 const sass = require("gulp-dart-sass");
 // css 縮小化
@@ -25,7 +26,7 @@ const srcPath = {
 	scss: srcBase + "/asset/sass/**/*.scss",
 	js: srcBase + "/asset/js/*.js",
 	img: srcBase + "/asset/img/**",
-	html: srcBase + "/*.html",
+	html: srcBase + "/**/*.html",
 };
 
 const docsPath = {
@@ -39,31 +40,34 @@ const docsPath = {
  * sass
  */
 const cssSass = () => {
-	return gulp
-		.src(srcPath.scss, {
-			sourcemaps: true,
-		})
-		.pipe(
-			//エラーが出ても処理を止めない
-			plumber({
-				errorHandler: notify.onError("Error:<%= error.message %>"),
+	return (
+		gulp
+			.src(srcPath.scss, {
+				sourcemaps: true,
 			})
-		)
-		.pipe(sass({ outputStyle: "expanded" })) //指定できるキー expanded compressed
-		.pipe(
-			purgecss({
-				content: ["./src/*.html", "./src/**/*.js"], // src()のファイルで使用される可能性のあるファイルを全て指定
-			})
-		)
-		.pipe(cleancss())
-		.pipe(gulp.dest(docsPath.css, { sourcemaps: "./" })) //コンパイル先
-		.pipe(browserSync.stream())
-		.pipe(
-			notify({
-				message: "Sassをコンパイルしました！",
-				onLast: true,
-			})
-		);
+			.pipe(
+				//エラーが出ても処理を止めない
+				plumber({
+					errorHandler: notify.onError("Error:<%= error.message %>"),
+				})
+			)
+			.pipe(sass({ outputStyle: "expanded" })) //指定できるキー expanded compressed
+			.pipe(
+				purgecss({
+					content: ["./src/*.html", "./src/**/*.js"], // src()のファイルで使用される可能性のあるファイルを全て指定
+				})
+			)
+			// .pipe(csscomb()) // csscombでCSSの順序指定
+			.pipe(cleancss())
+			.pipe(gulp.dest(docsPath.css, { sourcemaps: "./" })) //コンパイル先
+			.pipe(browserSync.stream())
+			.pipe(
+				notify({
+					message: "Sassをコンパイルしました！",
+					onLast: true,
+				})
+			)
+	);
 };
 
 /**
