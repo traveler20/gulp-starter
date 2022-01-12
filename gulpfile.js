@@ -54,7 +54,7 @@ const cssSass = () => {
 			.pipe(sass({ outputStyle: "expanded" })) //指定できるキー expanded compressed
 			.pipe(
 				purgecss({
-					content: ["./src/*.html", "./src/**/*.js"], // src()のファイルで使用される可能性のあるファイルを全て指定
+					content: ["./src/**/*.html", "./src/**/*.js"], // src()のファイルで使用される可能性のあるファイルを全て指定
 				})
 			)
 			// .pipe(csscomb()) // csscombでCSSの順序指定
