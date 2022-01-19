@@ -3,25 +3,25 @@
 @use "./../../foundation/system" as s;
 
 .c-lists {
-	li {
-		position: relative;
-		padding-left: 24px;
-		&:before {
-			position: absolute;
-			left: 0;
-			content: "\e876";
-			font-family: "Material Icons";
-			font-weight: 900;
-		}
-	}
+    li {
+        position: relative;
+        padding-left: 24px;
+        &:before {
+            position: absolute;
+            left: 0;
+            content: "\e876";
+            font-family: "Material Icons";
+            font-weight: 900;
+        }
+    }
 
-	&Title {
-		font-size: 2rem;
-		font-weight: bold;
-	}
+    &Title {
+        font-size: 2rem;
+        font-weight: bold;
+    }
 
-	@include s.breakpoint(tablet) {
-	}
-	@include s.breakpoint(pc) {
-	}
+    @include s.breakpoint(tablet) {
+    }
+    @include s.breakpoint(pc) {
+    }
 }

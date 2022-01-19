@@ -3,69 +3,69 @@
 @use "./../../foundation/system" as s;
 
 .c-details {
-	width: 100%;
-	margin: 0 auto;
+    width: 100%;
+    margin: 0 auto;
 
-	summary {
-		position: relative;
-		display: block;
-		padding: 10px 20px;
-		font-weight: bold;
-		background-color: rgba($color: s.$c-accent, $alpha: 0.5);
-		cursor: pointer;
-		transition: 0.2s;
-		&:hover {
-			background-color: rgba($color: s.$c-accent, $alpha: 0.7);
-		}
-		/* デフォルトの矢印を消す */
-		&::-webkit-details-marker {
-			display: none;
-		}
-		/* アコーディオンの＋アイコン */
-		&:after {
-			position: absolute;
-			top: 2px;
-			right: 3%;
-			content: "\e145";
-			font-family: "Material Icons";
-			font-size: 28px;
-			color: s.$c-accent;
-			margin: auto;
-			transition: 0.4s;
-		}
-	}
+    summary {
+        position: relative;
+        display: block;
+        padding: 10px 20px;
+        font-weight: bold;
+        background-color: rgba($color: s.$c-accent, $alpha: 0.5);
+        cursor: pointer;
+        transition: 0.2s;
+        &:hover {
+            background-color: rgba($color: s.$c-accent, $alpha: 0.7);
+        }
+        /* デフォルトの矢印を消す */
+        &::-webkit-details-marker {
+            display: none;
+        }
+        /* アコーディオンの＋アイコン */
+        &:after {
+            position: absolute;
+            top: 2px;
+            right: 3%;
+            content: "\e145";
+            font-family: "Material Icons";
+            font-size: 28px;
+            color: s.$c-accent;
+            margin: auto;
+            transition: 0.4s;
+        }
+    }
 
-	/* アコーディオンオープン時のスタイル */
-	&[open] {
-		summary {
-			background-color: rgba($color: s.$c-accent, $alpha: 0.7);
-			&:after {
-				transform: rotate(135deg); /* アイコンを回転 */
-			}
-		}
-		/* アニメーション */
-		.c-faq__content {
-			animation: detailsopen 0.5s ease;
-		}
-	}
-	@keyframes detailsopen {
-		0% {
-			opacity: 0;
-			transform: translateY(-10px);
-		}
-		100% {
-			opacity: 1;
-			transform: none;
-		}
-	}
+    /* アコーディオンオープン時のスタイル */
+    &[open] {
+        summary {
+            background-color: rgba($color: s.$c-accent, $alpha: 0.7);
+            &:after {
+                transform: rotate(135deg); /* アイコンを回転 */
+            }
+        }
+        /* アニメーション */
+        .c-faq__content {
+            animation: detailsopen 0.5s ease;
+        }
+    }
+    @keyframes detailsopen {
+        0% {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        100% {
+            opacity: 1;
+            transform: none;
+        }
+    }
 
-	&__content {
-		padding: 10px 20px;
-	}
+    &__content {
+        padding: 10px 20px;
+    }
 
-	@include s.breakpoint(tablet) {
-		width: 80%;
-	}
-	@include s.breakpoint(pc) {
-	}
+    @include s.breakpoint(tablet) {
+        width: 80%;
+    }
+    @include s.breakpoint(pc) {
+    }
 }

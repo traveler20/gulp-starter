@@ -3,99 +3,99 @@
 @use "./../../foundation/system" as s;
 
 .c-form {
-	max-width: 600px;
-	margin: 0 auto;
-	&__item {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-evenly;
-		margin-bottom: 20px;
-	}
-	&__label,
-	&__input {
-		padding: 10px;
-	}
-	&__label {
-		width: 90%;
-	}
-	&__input {
-		width: 90%;
-		font-size: 16px;
-		border: solid 1px s.$c-body;
-		border-radius: 4px;
-		&:focus-visible {
-			outline: s.$c-accent auto 1px;
-		}
-	}
-	ul.c-form__input {
-		border: none;
-		list-style-type: none;
-		margin: 0;
-	}
-	textarea.c-form__input {
-		height: 160px;
-	}
+    max-width: 600px;
+    margin: 0 auto;
+    &__item {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-bottom: 20px;
+    }
+    &__label,
+    &__input {
+        padding: 10px;
+    }
+    &__label {
+        width: 90%;
+    }
+    &__input {
+        width: 90%;
+        font-size: 16px;
+        border: solid 1px s.$c-body;
+        border-radius: 4px;
+        &:focus-visible {
+            outline: s.$c-accent auto 1px;
+        }
+    }
+    ul.c-form__input {
+        border: none;
+        list-style-type: none;
+        margin: 0;
+    }
+    textarea.c-form__input {
+        height: 160px;
+    }
 
-	&__required {
-		color: s.$c-base-sub;
-		background-color: s.$c-accent;
-		border-radius: 2px;
-		padding: 5px 5px;
-		margin: 0 0 0 18px;
-	}
+    &__required {
+        color: s.$c-base-sub;
+        background-color: s.$c-accent;
+        border-radius: 2px;
+        padding: 5px 5px;
+        margin: 0 0 0 18px;
+    }
 
-	&__submit {
-		text-align: center;
-		margin-top: 36px;
-	}
-	&__button {
-		display: inline-block;
-		font-size: 14px;
-		font-weight: bold;
-		color: s.$c-base;
-		background-color: s.$c-accent;
-		border: solid 2px s.$c-accent;
-		border-radius: 50px;
-		padding: 16px 79px;
-		text-decoration: none;
-		position: relative;
-		&:after {
-			position: absolute;
-			right: 24px;
-			content: "\e5e1";
-			font-family: "Material Icons";
-		}
-		&:hover {
-			color: s.$c-accent;
-			background-color: transparent;
-		}
-	}
+    &__submit {
+        text-align: center;
+        margin-top: 36px;
+    }
+    &__button {
+        display: inline-block;
+        font-size: 14px;
+        font-weight: bold;
+        color: s.$c-base;
+        background-color: s.$c-accent;
+        border: solid 2px s.$c-accent;
+        border-radius: 50px;
+        padding: 16px 79px;
+        text-decoration: none;
+        position: relative;
+        &:after {
+            position: absolute;
+            right: 24px;
+            content: "\e5e1";
+            font-family: "Material Icons";
+        }
+        &:hover {
+            color: s.$c-accent;
+            background-color: transparent;
+        }
+    }
 
-	&Thanks {
-		text-align: center;
-		max-width: 600px;
-		margin: 40px auto 0;
-		padding: 8px;
-		border: solid 3px s.$c-accent;
-		border-radius: 2px;
+    &Thanks {
+        text-align: center;
+        max-width: 600px;
+        margin: 40px auto 0;
+        padding: 8px;
+        border: solid 3px s.$c-accent;
+        border-radius: 2px;
 
-		display: none;
-		&.is-received {
-			display: block;
-		}
-	}
+        display: none;
+        &.is-received {
+            display: block;
+        }
+    }
 
-	@include s.breakpoint(tablet) {
-		&__item {
-			flex-wrap: nowrap;
-		}
-		&__label {
-			width: 40%;
-		}
-		&__input {
-			width: 55%;
-		}
-	}
-	@include s.breakpoint(pc) {
-	}
+    @include s.breakpoint(tablet) {
+        &__item {
+            flex-wrap: nowrap;
+        }
+        &__label {
+            width: 40%;
+        }
+        &__input {
+            width: 55%;
+        }
+    }
+    @include s.breakpoint(pc) {
+    }
 }

@@ -20,20 +20,20 @@ $c-dark: #222; // footer
 // transition
 // ---------------------
 @mixin transition-base($second: 0.4s) {
-	transition: all $second;
+    transition: all $second;
 }
 
 // content max-width
 // ---------------------
 @mixin content-maxwidth($px: 1200px) {
-	max-width: $px;
+    max-width: $px;
 }
 
 // font system
 // ---------------------
 @mixin garamond($weight: bold) {
-	font-family: "Cormorant Garamond", serif;
-	font-weight: $weight;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: $weight;
 }
 
 // Google Font Awesome
@@ -43,25 +43,25 @@ $c-dark: #222; // footer
 // responsive system
 // ---------------------
 @mixin breakpoint($point) {
-	@if $point == tablet {
-		@media (min-width: 640px) {
-			@content;
-		}
-	}
-	@if $point == pc {
-		@media (min-width: 890px) {
-			@content;
-		}
-	}
+    @if $point == tablet {
+        @media (min-width: 640px) {
+            @content;
+        }
+    }
+    @if $point == pc {
+        @media (min-width: 890px) {
+            @content;
+        }
+    }
 }
 
 .pc-only {
-	display: none;
+    display: none;
 }
 @include breakpoint(tablet) {
 }
 @include breakpoint(pc) {
-	.pc-only {
-		display: inline-block;
-	}
+    .pc-only {
+        display: inline-block;
+    }
 }
