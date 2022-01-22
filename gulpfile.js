@@ -1,6 +1,9 @@
 //gulp本体
 const gulp = require("gulp");
 
+// ejs
+const ejs = require("gulp-ejs");
+const rename = require("gulp-rename");
 // const csscomb = require("gulp-csscomb");
 // scss Dart Sass はSass公式が推奨 @use構文などが使える
 const sass = require("gulp-dart-sass");
@@ -27,6 +30,7 @@ const srcPath = {
     js: srcBase + "/asset/js/*.js",
     img: srcBase + "/asset/img/**",
     html: srcBase + "/**/*.html",
+    ejs: [srcBase + "/**/*.ejs", "!" + srcBase + "/**/_*.ejs"],
 };
 
 const docsPath = {
@@ -34,6 +38,7 @@ const docsPath = {
     js: docsBase + "/asset/js/",
     img: docsBase + "/asset/img/",
     html: docsBase + "/",
+    ejs: docsBase + "/",
 };
 
 /**
@@ -54,7 +59,11 @@ const cssSass = () => {
             .pipe(sass({ outputStyle: "expanded" })) //指定できるキー expanded compressed
             .pipe(
                 purgecss({
-                    content: ["./src/**/*.html", "./src/**/*.js"], // src()のファイルで使用される可能性のあるファイルを全て指定
+                    content: [
+                        "./src/**/*.html",
+                        "./src/**/*.ejs",
+                        "./src/**/*.js",
+                    ], // src()のファイルで使用される可能性のあるファイルを全て指定
                 })
             )
             // .pipe(csscomb()) // csscombでCSSの順序指定
@@ -118,6 +127,18 @@ const html = () => {
 };
 
 /**
+ * ejs
+ */
+const ejsHtml = () => {
+    return gulp
+        .src(srcPath.ejs)
+        .pipe(plumber())
+        .pipe(ejs())
+        .pipe(rename({ extname: ".html" }))
+        .pipe(gulp.dest(docsPath.ejs));
+};
+
+/**
  * ローカルサーバー立ち上げ
  */
 const browserSyncFunc = () => {
@@ -146,6 +167,7 @@ const watchFiles = () => {
     gulp.watch(srcPath.js, gulp.series(js));
     gulp.watch(srcPath.img, gulp.series(img));
     gulp.watch(srcPath.html, gulp.series(html, browserSyncReload));
+    gulp.watch(srcPath.ejs, gulp.series(ejsHtml, browserSyncReload));
 };
 
 /**
@@ -153,6 +175,6 @@ const watchFiles = () => {
  * parallelは並列で実行
  */
 exports.default = gulp.series(
-    gulp.parallel(html, img, js, cssSass),
+    gulp.parallel(html, ejsHtml, img, js, cssSass),
     gulp.parallel(watchFiles, browserSyncFunc)
 );
