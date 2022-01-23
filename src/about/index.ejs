@@ -3,19 +3,12 @@
     <head>
         <!-- path -->
         <% const path='./../'; %>
-        <!-- meta.title -->
-        <% const title = 'ページタイトル'; %>
-        <!-- meta.description -->
-        <% const description =
-        '説明文が入ります。説明文が入ります。説明文が入ります。説明文が入ります。説明文が入ります。';
-        %>
-        <!-- url -->
-        <% const url='sample.com'; %>
-        <!-- twitterid -->
-        <% const twitterid='@traveler20site'; %>
+        <!-- meta -->
+        <% const meta = { title:'Aboutページタイトル',
+        description:'説明文が入ります。説明文が入ります。説明文が入ります。説明文が入ります。説明文が入ります。',
+        }; %>
         <!-- head -->
-        <%- include('./../_include/_head', { title: title,
-        description:description,url:url,path:path, twitterid:twitterid, }) %>
+        <%- include('./../_include/_head', { path:path, meta:meta,}) %>
     </head>
     <body>
         <%- include('./../_include/_header',{path:path,}) %>
