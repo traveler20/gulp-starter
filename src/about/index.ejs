@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <!-- path -->
+        <% const path='./../'; %>
+        <!-- meta.title -->
+        <% const title = 'ページタイトル'; %>
+        <!-- meta.description -->
+        <% const description =
+        '説明文が入ります。説明文が入ります。説明文が入ります。説明文が入ります。説明文が入ります。';
+        %>
+        <!-- url -->
+        <% const url='sample.com'; %>
+        <!-- twitterid -->
+        <% const twitterid='@traveler20site'; %>
+        <!-- head -->
+        <%- include('./../_include/_head', { title: title,
+        description:description,url:url,path:path, twitterid:twitterid, }) %>
+    </head>
+    <body>
+        <%- include('./../_include/_header',{path:path,}) %>
+
+        <!-- main -->
+        <main>
+            <!-- .p-about -->
+            <section id="about" class="p-about c-section">
+                <div class="c-section__inner">
+                    <h2 class="c-section__title">about</h2>
+                    <p class="c-section__lead">aboutページです。</p>
+                </div>
+            </section>
+            <!-- /.p-about -->
+        </main>
+        <!-- /main -->
+
+        <%- include('./../_include/_footer',{path:path,}) %>
+    </body>
+</html>

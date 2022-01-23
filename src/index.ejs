@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="ja">
     <head>
-        <% const path='./'; %> <% const title = 'ページタイトル'; const
-        description
-        ='説明文が入ります。説明文が入ります。説明文が入ります。説明文が入ります。説明文が入ります。';
-        const url='sample.com'; const twitterid='@traveler20site'; %> <%-
-        include('./_include/_head', { title: title,
+        <!-- path -->
+        <% const path='./'; %>
+        <!-- meta.title -->
+        <% const title = 'ページタイトル'; %>
+        <!-- meta.description -->
+        <% const description =
+        '説明文が入ります。説明文が入ります。説明文が入ります。説明文が入ります。説明文が入ります。';
+        %>
+        <!-- url -->
+        <% const url='sample.com'; %>
+        <!-- twitterid -->
+        <% const twitterid='@traveler20site'; %>
+        <!-- head -->
+        <%- include('./_include/_head', { title: title,
         description:description,url:url,path:path, twitterid:twitterid, }) %>
     </head>
     <body>
-        <%- include('./_include/_header') %>
+        <%- include('./_include/_header',{path:path,}) %>
 
         <!-- main -->
         <main>
@@ -181,7 +190,7 @@
         </main>
         <!-- /main -->
 
-        <%- include('./_include/_footer') %>
+        <%- include('./_include/_footer',{path:path,}) %>
         <iframe
             name="hidden_iframe"
             id="hidden_iframe"
