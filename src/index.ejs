@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja">
     <head>
-        <% const title = 'ページタイトル'; const description
+        <% const path='./'; %> <% const title = 'ページタイトル'; const
+        description
         ='説明文が入ります。説明文が入ります。説明文が入ります。説明文が入ります。説明文が入ります。';
-        %> <%- include('./_include/_head', { title: title, description:
-        description })%>
+        const url='sample.com'; const twitterid='@traveler20site'; %> <%-
+        include('./_include/_head', { title: title,
+        description:description,url:url,path:path, twitterid:twitterid, }) %>
     </head>
     <body>
         <%- include('./_include/_header') %>
@@ -180,8 +182,6 @@
         <!-- /main -->
 
         <%- include('./_include/_footer') %>
-
-        <script src="./asset/js/script.js"></script>
         <iframe
             name="hidden_iframe"
             id="hidden_iframe"
