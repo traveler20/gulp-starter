@@ -7,20 +7,20 @@
 <meta name="description" content="<%= meta.description %>" />
 <meta property="og:title" content="<%= meta.title%>" />
 <meta property="og:description" content="<%= meta.description %>" />
-<% if(meta.url) { %>
+<%_ if(meta.url) { _%>
 <meta property="og:url" content="https://traveler20.site/<%= meta.url %>" />
-<% }else{ %>
+<%_ }else{ _%>
 <meta property="og:url" content="https://traveler20.site/" />
-<% } %>
+<%_ } _%>
 <!-- ogp-image -->
-<% if(meta.ogp) { %>
+<%_ if(meta.ogp) { _%>
 <meta property="og:image" content="https://traveler20.site/<%= meta.ogp %>" />
-<% }else{ %>
+<%_ }else{ _%>
 <meta
     property="og:image"
     content="https://traveler20.site/asset/img/ogp.webp"
 />
-<% } %>
+<%_ } _%>
 <meta property="og:locale" content="ja_JP" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@traveler20site" />
