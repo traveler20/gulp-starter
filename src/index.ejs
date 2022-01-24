@@ -8,10 +8,10 @@
         description:'説明文が入ります。説明文が入ります。説明文が入ります。説明文が入ります。説明文が入ります。',
         }; _%>
         <!-- head -->
-        <%- include('./_include/_head', { path:path, meta:meta,}) %>
+        <%- include('./_component/_head', { path:path, meta:meta,}) %>
     </head>
     <body>
-        <%- include('./_include/_header',{path:path,}) %>
+        <%- include('./_component/_header',{path:path,}) %>
 
         <!-- main -->
         <main>
@@ -183,7 +183,7 @@
         </main>
         <!-- /main -->
 
-        <%- include('./_include/_footer',{path:path,}) %>
+        <%- include('./_component/_footer',{path:path,}) %>
         <iframe
             name="hidden_iframe"
             id="hidden_iframe"
