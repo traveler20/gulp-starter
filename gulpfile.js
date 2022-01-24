@@ -4,6 +4,8 @@ const gulp = require("gulp");
 // ejs
 const ejs = require("gulp-ejs");
 const rename = require("gulp-rename");
+// prettier
+const prettier = require("gulp-prettier");
 // const csscomb = require("gulp-csscomb");
 // scss Dart Sass はSass公式が推奨 @use構文などが使える
 const sass = require("gulp-dart-sass");
@@ -135,6 +137,7 @@ const ejsHtml = () => {
         .pipe(plumber())
         .pipe(ejs())
         .pipe(rename({ extname: ".html" }))
+        .pipe(prettier())
         .pipe(gulp.dest(docsPath.ejs));
 };
 
