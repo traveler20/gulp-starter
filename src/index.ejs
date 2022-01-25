@@ -1,14 +1,11 @@
+<!-- path -->
+<%_ const path='./'; _%>
 <!DOCTYPE html>
 <html lang="ja">
     <head>
-        <!-- path -->
-        <%_ const path='./'; _%>
         <!-- meta -->
-        <%_ const meta = { title:'ページタイトル',
-        description:'説明文が入ります。説明文が入ります。説明文が入ります。説明文が入ります。説明文が入ります。',
-        }; _%>
-        <!-- head -->
-        <%- include('./_component/_head', { path:path, meta:meta,}) %>
+        <%- include('./_component/_head', {
+        path:path,meta:data.meta['home'],})%>
     </head>
     <body>
         <%- include('./_component/_header',{path:path,}) %>

@@ -4,11 +4,8 @@
         <!-- path -->
         <%_ const path='./../'; _%>
         <!-- meta -->
-        <%_ const meta = { title:'Aboutページタイトル',
-        description:'説明文が入ります。説明文が入ります。説明文が入ります。説明文が入ります。説明文が入ります。',
-        url:'about' }; _%>
-        <!-- head -->
-        <%- include('./../_component/_head', { path:path, meta:meta,}) %>
+        <%- include('./../_component/_head', {
+        path:path,meta:data.meta['about'],}) %>
     </head>
     <body>
         <%- include('./../_component/_header',{path:path,}) %>

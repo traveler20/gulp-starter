@@ -2,6 +2,7 @@
 const gulp = require("gulp");
 
 // ejs
+const fs = require("fs");
 const ejs = require("gulp-ejs");
 const rename = require("gulp-rename");
 // prettier
@@ -132,10 +133,11 @@ const html = () => {
  * ejs
  */
 const ejsHtml = () => {
+    const json = JSON.parse(fs.readFileSync("./ejs-config.json"));
     return gulp
         .src(srcPath.ejs)
         .pipe(plumber())
-        .pipe(ejs())
+        .pipe(ejs(json, { ext: ".html" }))
         .pipe(rename({ extname: ".html" }))
         .pipe(prettier())
         .pipe(gulp.dest(docsPath.ejs));
