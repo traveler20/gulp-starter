@@ -17,6 +17,7 @@
     }
     &__label {
         width: 90%;
+        position: relative; // &__required用
     }
     &__input {
         width: 90%;
@@ -37,6 +38,10 @@
     }
 
     &__required {
+        position: absolute;
+        top: 5px;
+        right: 20px;
+
         color: s.$c-base-sub;
         background-color: s.$c-accent;
         border-radius: 2px;
@@ -91,6 +96,7 @@
         }
         &__label {
             width: 40%;
+            // text-align: right;
         }
         &__input {
             width: 55%;
