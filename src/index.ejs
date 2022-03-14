@@ -173,6 +173,15 @@
                     <p id="js-formThanks" class="c-formThanks">
                         お問い合わせありがとうございます。
                     </p>
+                    <script>
+                        let submitted = false;
+                    </script>
+                    <iframe
+                        name="hidden_iframe"
+                        id="hidden_iframe"
+                        style="display: none"
+                        onload="if(submitted){document.getElementById('js-formThanks').classList.add('is-received');}"
+                    ></iframe>
                 </div>
             </section>
             <!-- /.p-contact -->
@@ -180,11 +189,5 @@
         <!-- /main -->
 
         <%- include('./_component/_footer',{path:path,}) %>
-        <iframe
-            name="hidden_iframe"
-            id="hidden_iframe"
-            style="display: none"
-            onload="if(submitted){document.getElementById('js-formThanks').classList.add('is-received');}"
-        ></iframe>
     </body>
 </html>

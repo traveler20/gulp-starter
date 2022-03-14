@@ -7,7 +7,7 @@ window.onload = function () {
     document.getElementById("js-fv").classList.add("is-show");
 };
 
-// #js=header headerIn
+// #js-header headerIn
 (function () {
     const target = document.getElementById("js-header"),
         height = 60;
@@ -26,7 +26,7 @@ window.onload = function () {
         }
     }
 
-    window.addEventListener("scroll", function (e) {
+    window.addEventListener("scroll", function () {
         lastPosition = window.scrollY;
         if (!ticking) {
             window.requestAnimationFrame(function () {
@@ -80,6 +80,3 @@ function showElementAnimation() {
 }
 showElementAnimation();
 window.addEventListener("scroll", showElementAnimation);
-
-// submit
-let submitted = false;
