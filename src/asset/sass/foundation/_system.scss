@@ -8,8 +8,11 @@ $c-base-sub: #fff;
 $c-body: #333;
 $c-accent: #ca6060;
 
-$c-light: #ccc; // header
-$c-dark: #222; // footer
+$c-white: #fff;
+$c-black: #333;
+
+$c-base-white: $c-white;
+$c-base-black: $c-black;
 
 // // dark mode
 // $c-base: #333;

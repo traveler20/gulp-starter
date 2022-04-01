@@ -6,14 +6,14 @@ $header-height: 60px;
 
 .l-header {
     width: 100%;
-    background-color: s.$c-light;
+    background-color: s.$c-base-white;
 
     position: sticky;
     top: 0;
     z-index: 2;
     @include s.transition-base();
     transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 4px -4px rgba($color: s.$c-dark, $alpha: 0.6);
+    box-shadow: 0 4px 4px -4px rgba($color: s.$c-base-black, $alpha: 0.6);
     &.is-headIn {
         transform: translateY(-100%);
     }
