@@ -22,7 +22,7 @@ $header-height: 60px;
         @include s.content-maxwidth();
         margin: 0 auto;
         padding: 10px 20px;
-        color: s.$c-base;
+        color: s.$c-base-white;
 
         display: flex;
         justify-content: space-between;
@@ -32,7 +32,7 @@ $header-height: 60px;
     &__logo {
         text-transform: uppercase;
         text-decoration: none;
-        color: s.$c-body;
+        color: s.$c-body-black;
         font-size: 2rem;
         font-weight: bold;
     }
@@ -50,12 +50,12 @@ $header-height: 60px;
         text-transform: uppercase;
         font-weight: bold;
         padding: 3px 16px;
-        color: s.$c-base-sub;
-        background-color: s.$c-body;
-        border: solid 1px s.$c-body;
+        color: s.$c-body-black;
+        background-color: s.$c-base-black;
+        border: solid 1px s.$c-base-black;
         border-radius: 50px;
         &:hover {
-            color: s.$c-body;
+            color: s.$c-base-black;
             background-color: transparent;
             text-decoration: none;
         }
@@ -69,11 +69,11 @@ $header-height: 60px;
         left: 100%;
         width: 100%;
         max-width: 100vw;
-        background: s.$c-base;
+        background: s.$c-base-white;
         text-align: center;
         @include s.transition-base();
         a {
-            color: s.$c-body;
+            color: s.$c-body-black;
             text-decoration: none;
             text-transform: uppercase;
             position: relative;
@@ -87,7 +87,7 @@ $header-height: 60px;
                 content: "";
                 width: 0;
                 height: 2px;
-                background-color: s.$c-body;
+                background-color: s.$c-base-black;
                 transition: 0.4s;
                 transform: translateX(-50%);
             }
@@ -114,7 +114,7 @@ $header-height: 60px;
             position: absolute;
             height: 4px;
             width: 25px;
-            background-color: s.$c-body;
+            background-color: s.$c-base-black;
             border-radius: 1px;
             content: "";
             cursor: pointer;
@@ -186,7 +186,7 @@ $header-height: 60px;
                 transform: translateY(calc(-50% - 2px)) rotate(30deg);
                 width: 12px;
                 height: 2px;
-                background-color: s.$c-accent;
+                background-color: s.$c-primary;
                 transition: 0.4s;
             }
             &::after {
@@ -197,7 +197,7 @@ $header-height: 60px;
                 transform: translateY(-50%);
                 width: 40px;
                 height: 2px;
-                background-color: s.$c-accent;
+                background-color: s.$c-primary;
                 transition: 0.4s;
             }
             &:hover {
@@ -217,11 +217,11 @@ $header-height: 60px;
             left: 0;
             background: transparent;
             a {
-                color: s.$c-body;
+                color: s.$c-body-black;
                 margin: 8px auto;
                 padding: 0 8px;
                 &:after {
-                    background-color: s.$c-body;
+                    background-color: s.$c-body-black;
                 }
             }
         }

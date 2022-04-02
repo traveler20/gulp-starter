@@ -3,10 +3,10 @@
 @use "./../../foundation/system" as s;
 
 .c-section {
-    background-color: s.$c-base;
+    background-color: s.$c-base-white;
     padding: 120px 0;
     &:nth-of-type(even) {
-        background-color: s.$c-base-sub;
+        background-color: s.$c-base-lightGray;
     }
 
     &__inner {

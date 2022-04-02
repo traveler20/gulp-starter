@@ -9,14 +9,14 @@
     -webkit-overflow-scrolling: touch;
     // table {
     border-collapse: collapse;
-    border: solid 3px s.$c-accent;
+    border: solid 3px s.$c-primary;
     margin: 0 auto;
     // }
     caption {
         text-align: center;
-        color: #fff;
+        color: s.$c-body-white;
         font-weight: bold;
-        background: s.$c-accent;
+        background: s.$c-primary;
         padding: 8px 10px;
     }
     th,
@@ -24,11 +24,11 @@
         padding: 8px 10px;
     }
     th {
-        border: solid 1px s.$c-accent;
-        background-color: rgba($color: s.$c-accent, $alpha: 0.5);
+        border: solid 1px s.$c-primary;
+        background-color: rgba($color: s.$c-primary, $alpha: 0.5);
     }
     td {
-        border: dashed 1px s.$c-accent;
+        border: dashed 1px s.$c-primary;
     }
     // }
     @include s.breakpoint(tablet) {

@@ -3,22 +3,18 @@
 
 // color system
 // ---------------------
-$c-base: #efefef;
-$c-base-sub: #fff;
-$c-body: #333;
-$c-accent: #ca6060;
-
 $c-white: #fff;
+$c-lightGray: #efefef;
 $c-black: #333;
 
+$c-primary: #ca6060;
+
 $c-base-white: $c-white;
+$c-base-lightGray: $c-lightGray;
 $c-base-black: $c-black;
 
-// // dark mode
-// $c-base: #333;
-// $c-base-sub: #222;
-// $c-body: #fff;
-// $c-accent: #ca6060;
+$c-body-white: $c-white;
+$c-body-black: $c-black;
 
 // transition
 // ---------------------
