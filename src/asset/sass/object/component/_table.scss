@@ -3,20 +3,19 @@
 @use "./../../foundation/system" as s;
 
 .c-table {
-    // &--matrix {
     white-space: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    // table {
-    border-collapse: collapse;
-    border: solid 3px s.$c-primary;
-    margin: 0 auto;
-    // }
+    &__block {
+        border-collapse: collapse;
+        border: solid 3px s.$c-base-black;
+        margin: 0 auto;
+    }
     caption {
         text-align: center;
         color: s.$c-body-white;
         font-weight: bold;
-        background: s.$c-primary;
+        background: s.$c-base-black;
         padding: 8px 10px;
     }
     th,
@@ -24,11 +23,11 @@
         padding: 8px 10px;
     }
     th {
-        border: solid 1px s.$c-primary;
-        background-color: rgba($color: s.$c-primary, $alpha: 0.5);
+        border: solid 1px s.$c-base-black;
+        background-color: rgba($color: s.$c-base-black, $alpha: 0.2);
     }
     td {
-        border: dashed 1px s.$c-primary;
+        border: dashed 1px s.$c-base-black;
     }
     // }
     @include s.breakpoint(tablet) {

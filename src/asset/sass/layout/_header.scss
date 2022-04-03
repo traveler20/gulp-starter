@@ -22,7 +22,6 @@ $header-height: 60px;
         @include s.content-maxwidth();
         margin: 0 auto;
         padding: 10px 20px;
-        color: s.$c-base-white;
 
         display: flex;
         justify-content: space-between;
@@ -50,12 +49,12 @@ $header-height: 60px;
         text-transform: uppercase;
         font-weight: bold;
         padding: 3px 16px;
-        color: s.$c-body-black;
+        color: s.$c-body-white;
         background-color: s.$c-base-black;
         border: solid 1px s.$c-base-black;
         border-radius: 50px;
         &:hover {
-            color: s.$c-base-black;
+            color: s.$c-body-black;
             background-color: transparent;
             text-decoration: none;
         }
@@ -176,36 +175,7 @@ $header-height: 60px;
         }
 
         &__navCta {
-            position: relative;
             padding: 3px 32px;
-            &::before {
-                content: "";
-                position: absolute;
-                top: calc(50% - 2px);
-                right: -14px;
-                transform: translateY(calc(-50% - 2px)) rotate(30deg);
-                width: 12px;
-                height: 2px;
-                background-color: s.$c-primary;
-                transition: 0.4s;
-            }
-            &::after {
-                content: "";
-                position: absolute;
-                top: 50%;
-                right: -14px;
-                transform: translateY(-50%);
-                width: 40px;
-                height: 2px;
-                background-color: s.$c-primary;
-                transition: 0.4s;
-            }
-            &:hover {
-                &:before,
-                &:after {
-                    right: -20px;
-                }
-            }
         }
 
         &__navLists {
@@ -217,7 +187,7 @@ $header-height: 60px;
             left: 0;
             background: transparent;
             a {
-                color: s.$c-body-black;
+                // color: s.$c-body-black;
                 margin: 8px auto;
                 padding: 0 8px;
                 &:after {

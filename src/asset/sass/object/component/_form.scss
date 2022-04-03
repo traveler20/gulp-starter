@@ -61,7 +61,8 @@
         background-color: s.$c-primary;
         border: solid 2px s.$c-primary;
         border-radius: 50px;
-        padding: 16px 79px;
+        padding: 16px 20px;
+        min-width: 300px;
         text-decoration: none;
         position: relative;
         &:after {
