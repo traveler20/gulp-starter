@@ -3,11 +3,11 @@
 <html lang="ja">
     <head>
         <!-- meta -->
-        <%- include('./../_component/_head', {
-        path:path,meta:data.meta['about'],}) %>
+        <%- include('./../_common/_head', { path:path,meta:data.meta['about'],})
+        %>
     </head>
     <body>
-        <%- include('./../_component/_header',{path:path,}) %>
+        <%- include('./../_common/_header',{path:path,}) %>
 
         <!-- main -->
         <main>
@@ -22,6 +22,6 @@
         </main>
         <!-- /main -->
 
-        <%- include('./../_component/_footer',{path:path,}) %>
+        <%- include('./../_common/_footer',{path:path,}) %>
     </body>
 </html>

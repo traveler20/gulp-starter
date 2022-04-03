@@ -3,11 +3,10 @@
 <html lang="ja">
     <head>
         <!-- meta -->
-        <%- include('./_component/_head', {
-        path:path,meta:data.meta['home'],})%>
+        <%- include('./_common/_head', { path:path,meta:data.meta['home'],})%>
     </head>
     <body>
-        <%- include('./_component/_header',{path:path,}) %>
+        <%- include('./_common/_header',{path:path,}) %>
 
         <!-- main -->
         <main>
@@ -20,65 +19,19 @@
                         >からご連絡ください。
                     </p>
                     <article class="c-section__block">
-                        <details class="c-details">
-                            <summary>アコーディオンタイトル</summary>
-                            <div class="c-details__content">
-                                <h3 class="c-listsTitle"></h3>
-                                <ul class="c-lists">
-                                    <li>リスト1</li>
-                                    <li>リスト2</li>
-                                    <li>リスト3</li>
-                                    <li>リスト4</li>
-                                    <li>リスト5</li>
-                                </ul>
-                            </div>
-                        </details>
+                        <!-- .c-details -->
+                        <%- include('./_component/_details',{path:path,}) %>
+                        <!-- /.c-details -->
                     </article>
                     <article class="c-section__block">
-                        <div class="c-table">
-                            <table class="c-table__block">
-                                <caption>
-                                    上に見出しが来るタイプの表・テーブル
-                                </caption>
-                                <tr>
-                                    <th>＼</th>
-                                    <th>表上見出し1</th>
-                                    <th>表上見出し2</th>
-                                </tr>
-                                <tr>
-                                    <th>表横見出し1</th>
-                                    <td>表コンテンツ1</td>
-                                    <td>表コンテンツ2</td>
-                                </tr>
-
-                                <!--  横に結合する  -->
-                                <tr>
-                                    <th>表横見出し2</th>
-                                    <td colspan="2">表コンテンツ横2行</td>
-                                </tr>
-
-                                <!--  縦に結合する  -->
-                                <tr>
-                                    <th rowspan="2">表横見出し3</th>
-                                    <td>表コンテンツ1</td>
-                                    <td>表コンテンツ2</td>
-                                </tr>
-                                <tr>
-                                    <td>表コンテンツ3</td>
-                                    <td>表コンテンツ4</td>
-                                </tr>
-                            </table>
-                        </div>
+                        <!-- .c-table -->
+                        <%- include('./_component/_table',{path:path,}) %>
+                        <!-- /.c-table -->
                     </article>
                     <article class="c-section__block">
-                        <div class="c-cta">
-                            <p class="c-cta__copy">
-                                お問い合わせはこちらから！
-                            </p>
-                            <a href="#contact" class="c-cta__button"
-                                >お問い合わせフォームへ</a
-                            >
-                        </div>
+                        <!-- .c-cta -->
+                        <%- include('./_component/_cta',{path:path,}) %>
+                        <!-- /.c-cta -->
                     </article>
                 </div>
             </section>
@@ -195,6 +148,6 @@
         </main>
         <!-- /main -->
 
-        <%- include('./_component/_footer',{path:path,}) %>
+        <%- include('./_common/_footer',{path:path,}) %>
     </body>
 </html>
