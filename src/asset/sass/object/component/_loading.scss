@@ -1,12 +1,12 @@
 /* c-loading
 --------------------------- */
-@use "./../../foundation/system" as s;
+@use "./../../foundation/system" as *;
 
 .c-loading {
     width: 100vw;
     height: 100vh;
     transition: all 1s;
-    background-color: s.$c-base-white;
+    background-color: $c-base-white;
     position: fixed;
     top: 0;
     left: 0;
@@ -20,7 +20,7 @@
         width: 100px;
         height: 100px;
         margin: 40vh auto;
-        border: 3px solid s.$c-primary;
+        border: 3px solid $c-primary;
         border-top: 3px solid transparent;
         border-radius: 50%;
         animation: loadingAnimation 0.8s linear 0s infinite;
@@ -34,8 +34,8 @@
         }
     }
 
-    @include s.breakpoint(tablet) {
+    @include breakpoint(tablet) {
     }
-    @include s.breakpoint(pc) {
+    @include breakpoint(pc) {
     }
 }

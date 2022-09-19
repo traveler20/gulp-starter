@@ -3,13 +3,14 @@
 <html lang="ja">
     <head>
         <!-- meta -->
-        <%- include('./_common/_head', { path:path,meta:data.meta['home'],})%>
+        <%- include(path + '_common/_head', {
+        path:path,meta:data.meta['home'],})%>
     </head>
-    <body>
-        <%- include('./_common/_header',{path:path,}) %>
+    <body class="l-body">
+        <%- include(path + '_common/_header',{path:path,}) %>
 
         <!-- main -->
-        <main>
+        <main class="l-body-main">
             <!-- .p-about -->
             <section id="about" class="p-about c-section">
                 <div class="c-section__inner">
@@ -20,17 +21,18 @@
                     </p>
                     <article class="c-section__block">
                         <!-- .c-details -->
-                        <%- include('./_component/_details',{path:path,}) %>
+                        <%- include(path + '_component/_details',{path:path,})
+                        %>
                         <!-- /.c-details -->
                     </article>
                     <article class="c-section__block">
                         <!-- .c-table -->
-                        <%- include('./_component/_table',{path:path,}) %>
+                        <%- include(path + '_component/_table',{path:path,}) %>
                         <!-- /.c-table -->
                     </article>
                     <article class="c-section__block">
                         <!-- .c-cta -->
-                        <%- include('./_component/_cta',{path:path,}) %>
+                        <%- include(path + '_component/_cta',{path:path,}) %>
                         <!-- /.c-cta -->
                     </article>
                 </div>
@@ -148,6 +150,6 @@
         </main>
         <!-- /main -->
 
-        <%- include('./_common/_footer',{path:path,}) %>
+        <%- include(path + '_common/_footer',{path:path,}) %>
     </body>
 </html>

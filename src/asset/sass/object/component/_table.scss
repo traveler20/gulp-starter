@@ -1,6 +1,6 @@
 /* c-table
 --------------------------- */
-@use "./../../foundation/system" as s;
+@use "./../../foundation/system" as *;
 
 .c-table {
     white-space: nowrap;
@@ -8,14 +8,14 @@
     -webkit-overflow-scrolling: touch;
     &__block {
         border-collapse: collapse;
-        border: solid 3px s.$c-base-black;
+        border: solid 3px $c-base-black;
         margin: 0 auto;
     }
     caption {
         text-align: center;
-        color: s.$c-body-white;
+        color: $c-body-white;
         font-weight: bold;
-        background: s.$c-base-black;
+        background: $c-base-black;
         padding: 8px 10px;
     }
     th,
@@ -23,15 +23,15 @@
         padding: 8px 10px;
     }
     th {
-        border: solid 1px s.$c-base-black;
-        background-color: rgba($color: s.$c-base-black, $alpha: 0.2);
+        border: solid 1px $c-base-black;
+        background-color: rgba($color: $c-base-black, $alpha: 0.2);
     }
     td {
-        border: dashed 1px s.$c-base-black;
+        border: dashed 1px $c-base-black;
     }
     // }
-    @include s.breakpoint(tablet) {
+    @include breakpoint(tablet) {
     }
-    @include s.breakpoint(pc) {
+    @include breakpoint(pc) {
     }
 }

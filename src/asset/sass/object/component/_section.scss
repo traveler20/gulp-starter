@@ -1,16 +1,16 @@
 /* c-section
 --------------------------- */
-@use "./../../foundation/system" as s;
+@use "./../../foundation/system" as *;
 
 .c-section {
-    background-color: s.$c-base-white;
+    background-color: $c-base-white;
     padding: 120px 0;
     &:nth-of-type(even) {
-        background-color: s.$c-base-lightGray;
+        background-color: $c-base-lightGray;
     }
 
     &__inner {
-        @include s.content-maxwidth();
+        @include content-maxwidth();
         margin: 0 auto;
         padding: 10px 20px;
     }
@@ -29,8 +29,8 @@
         margin: 32px auto 0;
     }
 
-    @include s.breakpoint(tablet) {
+    @include breakpoint(tablet) {
     }
-    @include s.breakpoint(pc) {
+    @include breakpoint(pc) {
     }
 }

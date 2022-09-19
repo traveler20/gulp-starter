@@ -1,6 +1,6 @@
 /* c-details
 --------------------------- */
-@use "./../../foundation/system" as s;
+@use "./../../foundation/system" as *;
 
 .c-details {
     width: 100%;
@@ -11,11 +11,11 @@
         display: block;
         padding: 10px 20px;
         font-weight: bold;
-        background-color: rgba($color: s.$c-body-black, $alpha: 0.1);
+        background-color: rgba($color: $c-base-black, $alpha: 0.1);
         cursor: pointer;
         transition: 0.2s;
         &:hover {
-            background-color: rgba($color: s.$c-body-black, $alpha: 0.2);
+            background-color: rgba($color: $c-base-black, $alpha: 0.2);
         }
         /* デフォルトの矢印を消す */
         &::-webkit-details-marker {
@@ -29,7 +29,7 @@
             content: "\e145";
             font-family: "Material Icons";
             font-size: 28px;
-            color: rgba($color: s.$c-body-black, $alpha: 1);
+            color: rgba($color: $c-body-black, $alpha: 1);
             margin: auto;
             transition: 0.4s;
         }
@@ -38,7 +38,7 @@
     /* アコーディオンオープン時のスタイル */
     &[open] {
         summary {
-            background-color: rgba($color: s.$c-body-black, $alpha: 0.3);
+            background-color: rgba($color: $c-base-black, $alpha: 0.3);
             &:after {
                 transform: rotate(135deg); /* アイコンを回転 */
             }
@@ -63,9 +63,9 @@
         padding: 10px 20px;
     }
 
-    @include s.breakpoint(tablet) {
+    @include breakpoint(tablet) {
         width: 80%;
     }
-    @include s.breakpoint(pc) {
+    @include breakpoint(pc) {
     }
 }

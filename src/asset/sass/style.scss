@@ -1,22 +1,23 @@
-/*--------------------------------------*
- * foundation
- *--------------------------------------*/
+// ──────────────────────────────
+// foundation
+// ──────────────────────────────
 @use "./foundation/reset";
 @use "./foundation/system";
 @use "./foundation/base";
 
-/*--------------------------------------*
- * layout
- *--------------------------------------*/
+// ──────────────────────────────
+// layout
+// ──────────────────────────────
 @use "./layout/header";
+@use "./layout/body";
 @use "./layout/footer";
 
-/*--------------------------------------*
- * object
- *--------------------------------------*/
-/*-------------------
- * component
- -------------------*/
+// ──────────────────────────────
+// object
+// ──────────────────────────────
+// ───────────────
+// component
+// ───────────────
 @use "./object/component/loading";
 @use "./object/component/section";
 @use "./object/component/table";
@@ -25,12 +26,12 @@
 @use "./object/component/form";
 @use "./object/component/cta";
 
-/*-------------------
- * project
- -------------------*/
+// ───────────────
+// project
+// ───────────────
 @use "./object/project/contact";
 
-/*-------------------
- * object
- -------------------*/
-@use "./object/utility/display";
+// ───────────────
+// object
+// ───────────────
+@use "./object/utility/utility";

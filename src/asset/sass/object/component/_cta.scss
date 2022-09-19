@@ -1,6 +1,6 @@
 /* c-cta
 --------------------------- */
-@use "./../../foundation/system" as s;
+@use "./../../foundation/system" as *;
 
 .c-cta {
     display: flex;
@@ -22,7 +22,7 @@
             display: inline-block;
             width: 28px;
             height: 1px;
-            background-color: s.$c-base-black;
+            background-color: $c-base-black;
         }
         &:before {
             left: 0;
@@ -39,9 +39,9 @@
         text-align: center;
         font-size: 14px;
         font-weight: bold;
-        color: s.$c-base-white;
-        background-color: s.$c-primary;
-        border: solid 2px s.$c-primary;
+        color: $c-base-white;
+        background-color: $c-primary;
+        border: solid 2px $c-primary;
         border-radius: 50px;
         margin: 0 auto;
         padding: 16px 20px;
@@ -57,13 +57,13 @@
             font-family: "Material Icons";
         }
         &:hover {
-            color: s.$c-primary;
+            color: $c-primary;
             background-color: transparent;
         }
     }
 
-    @include s.breakpoint(tablet) {
+    @include breakpoint(tablet) {
     }
-    @include s.breakpoint(pc) {
+    @include breakpoint(pc) {
     }
 }

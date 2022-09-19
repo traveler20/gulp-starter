@@ -3,14 +3,14 @@
 <html lang="ja">
     <head>
         <!-- meta -->
-        <%- include('./../_common/_head', { path:path,meta:data.meta['about'],})
-        %>
+        <%- include(path + '_common/_head', {
+        path:path,meta:data.meta['about'],}) %>
     </head>
-    <body>
-        <%- include('./../_common/_header',{path:path,}) %>
+    <body class="l-body">
+        <%- include(path + '_common/_header',{path:path,}) %>
 
         <!-- main -->
-        <main>
+        <main class="l-body-main">
             <!-- .p-about -->
             <section id="about" class="p-about c-section">
                 <div class="c-section__inner">
@@ -22,6 +22,6 @@
         </main>
         <!-- /main -->
 
-        <%- include('./../_common/_footer',{path:path,}) %>
+        <%- include(path + '_common/_footer',{path:path,}) %>
     </body>
 </html>

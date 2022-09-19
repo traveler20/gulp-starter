@@ -1,9 +1,14 @@
 /* c-lists
 --------------------------- */
-@use "./../../foundation/system" as s;
+@use "./../../foundation/system" as *;
+
+.c-lists-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
 
 .c-lists {
-    li {
+    &__list {
         position: relative;
         padding-left: 24px;
         &:before {
@@ -15,13 +20,8 @@
         }
     }
 
-    &Title {
-        font-size: 2rem;
-        font-weight: bold;
+    @include breakpoint(tablet) {
     }
-
-    @include s.breakpoint(tablet) {
-    }
-    @include s.breakpoint(pc) {
+    @include breakpoint(pc) {
     }
 }

@@ -1,6 +1,6 @@
 /* c-form
 --------------------------- */
-@use "./../../foundation/system" as s;
+@use "./../../foundation/system" as *;
 
 .c-form {
     max-width: 600px;
@@ -22,10 +22,10 @@
     &__input {
         width: 90%;
         font-size: 16px;
-        border: solid 1px s.$c-body-black;
+        border: solid 1px $c-body-black;
         border-radius: 4px;
         &:focus-visible {
-            outline: s.$c-primary auto 1px;
+            outline: $c-primary auto 1px;
         }
     }
     ul.c-form__input {
@@ -42,8 +42,8 @@
         top: 5px;
         right: 20px;
 
-        color: s.$c-base-lightGray;
-        background-color: s.$c-primary;
+        color: $c-base-lightGray;
+        background-color: $c-primary;
         border-radius: 2px;
         padding: 5px 5px;
         margin: 0 0 0 18px;
@@ -57,9 +57,9 @@
         display: inline-block;
         font-size: 14px;
         font-weight: bold;
-        color: s.$c-base-white;
-        background-color: s.$c-primary;
-        border: solid 2px s.$c-primary;
+        color: $c-base-white;
+        background-color: $c-primary;
+        border: solid 2px $c-primary;
         border-radius: 50px;
         padding: 16px 20px;
         min-width: 300px;
@@ -72,7 +72,7 @@
             font-family: "Material Icons";
         }
         &:hover {
-            color: s.$c-primary;
+            color: $c-primary;
             background-color: transparent;
         }
     }
@@ -82,7 +82,7 @@
         max-width: 600px;
         margin: 40px auto 0;
         padding: 8px;
-        border: solid 3px s.$c-primary;
+        border: solid 3px $c-primary;
         border-radius: 2px;
 
         display: none;
@@ -91,7 +91,7 @@
         }
     }
 
-    @include s.breakpoint(tablet) {
+    @include breakpoint(tablet) {
         &__item {
             flex-wrap: nowrap;
         }
@@ -103,6 +103,6 @@
             width: 55%;
         }
     }
-    @include s.breakpoint(pc) {
+    @include breakpoint(pc) {
     }
 }
